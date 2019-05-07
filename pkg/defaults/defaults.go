@@ -195,4 +195,9 @@ const (
 	// mirroring it into the kvstore for reduced overhead in large
 	// clusters.
 	K8sEventHandover = false
+
+	// ForceLocalPolicyEvalAtSource is the default value for
+	// option.ForceLocalPolicyEvalAtSource. It is enabled by default to
+	// provide backwards compatibility, it can be disabled via an option
+	ForceLocalPolicyEvalAtSource = true
 )
