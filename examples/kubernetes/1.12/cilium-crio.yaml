@@ -166,6 +166,12 @@ data:
   #  - flannel
   #  - portmap (Enables HostPort support for Cilium)
   #cni-chaining-mode: none
+
+  # Enable legacy policy evaluation at the source endpoint for all local
+  # communication. This used to be the default and will continue to be enabled
+  # until users opt out of it. Opting out requires all pods to be restarted in
+  # order for the new model to take effect.
+  force-local-policy-eval-at-source: "false"
 ---
 apiVersion: apps/v1
 kind: DaemonSet
